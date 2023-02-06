@@ -16,10 +16,16 @@ const BoxTwo = styled.div`
   height: 100px;
 `;
 
+const Text = styled.span`
+  color: white;
+`;
+
 function App() {
   return (
     <Father>
-      <BoxOne />
+      <BoxOne>
+        <Text>Hello</Text>
+      </BoxOne>
       <BoxTwo />
     </Father>
   );
