@@ -41,3 +41,29 @@ const Box = styled.div`
   }
 `;
 ```
+
+### Styled Component 내부의 Styled Component 에 스타일 지정하기
+
+- styled component 내부에 styled component 를 넣고 그 컴포넌트를 지정해서 스타일을 주고 싶을 수도 있다
+- 그럴 땐 위해서 Styled Component 를 새로 만들고, 기존 Styled Component 에서 pseudo selector 를 쓰면 된다.
+
+```javascript
+const Emoji = styled.span`
+  font-size: 36px;
+`;
+const Box = styled.div`
+  ${Emoji}:hover {
+    font-size: 98px;
+  }
+`;
+function App() {
+  return (
+      <Box>
+        <Emoji as="p">🤔</Emoji>
+      </Box>
+      <Emoji>👍</Emoji>
+  );
+}
+```
+
+- 위처럼 되어있을 때, Box 안에 있는 Emoji 는 hover 스타일이 먹지만, 밖에 있는 Emoji 는 hover가 먹지 않는다
