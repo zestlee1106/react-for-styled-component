@@ -67,3 +67,9 @@ function App() {
 ```
 
 - 위처럼 되어있을 때, Box 안에 있는 Emoji 는 hover 스타일이 먹지만, 밖에 있는 Emoji 는 hover가 먹지 않는다
+
+### Theme 을 추가해 주기
+
+- 다크모드, 라이트모드가 필요하다면 ThemeProvider 를 사용하면 된다.
+- index.js 에서 App 을 ThemeProvider 로 감싸면 되고, theme props 로 스타일을 넘겨주면 된다
+- 그럼 app 안에서는 해당 값으로 스타일을 받아와서 쓸 수 있다

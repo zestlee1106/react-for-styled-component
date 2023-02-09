@@ -6,6 +6,7 @@ const Wrapper = styled.div`
   width: 100vw;
   justify-content: center;
   align-items: center;
+  background-color: ${(props) => props.theme.backgroundColor};
 `;
 
 const rotationAnimation = keyframes`
@@ -39,9 +40,14 @@ const Box = styled.div`
   }
 `;
 
+const Title = styled.h1`
+  color: ${(props) => props.theme.textColor};
+`;
+
 function App() {
   return (
     <Wrapper>
+      <Title />
       <Box>
         <Emoji as="p">🤔</Emoji>
       </Box>
